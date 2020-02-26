@@ -1,0 +1,22 @@
+#include <Arduino.h>
+#include <Led.h>
+
+//instance of our Led class
+//Type name (parameter to construcor)
+Led led (5);
+
+
+void setup() {
+Serial.begin(9600);
+}
+
+void loop() {
+ led.on();
+ Serial.println(led.status());
+
+ delay(1000);
+ Serial.println(led.status());
+
+ led.off();
+ delay(1000);
+}
